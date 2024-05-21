@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoLibrary.CardView"
+             x:Name="cardView"
+             >
+    <Border Style="{StaticResource CardStyle}" VerticalOptions="Start">
+        <Grid RowDefinitions="auto,*,auto">
+            <ContentView 
+                Content="{Binding Source={x:Reference cardView}, Path=Header}"/>
+            <ContentView 
+                Content="{Binding Source={x:Reference cardView}, Path=Body}" Grid.Row="1"/>
+            <ContentView 
+                Content="{Binding Source={x:Reference cardView}, Path=Footer}" Grid.Row="2"/>
+        </Grid>
+    </Border>
+</ContentView>

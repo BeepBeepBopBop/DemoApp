@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<local:PopupBase 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:local="clr-namespace:DemoLibrary"
+    x:Class="DemoLibrary.PopupView"
+    x:Name="popupView"
+                  >
+    <local:CardView x:Name="cardView" VerticalOptions="Center" HorizontalOptions="Center">
+        <local:CardView.Header>
+            <Label Text="Header content"/>
+        </local:CardView.Header>
+
+        <local:CardView.Body>
+            <ContentView x:Name="bodyContentView"/>
+        </local:CardView.Body>
+
+        <local:CardView.Footer>
+            <Label  Text="Footer content"/>
+        </local:CardView.Footer>
+    </local:CardView>
+</local:PopupBase>
